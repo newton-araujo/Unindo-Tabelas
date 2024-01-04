@@ -1,0 +1,23 @@
+# Executar Consulta SQL no SQL Fiddle
+
+[![Run on SQL Fiddle](https://sqlfiddle.com/assets/img/run.png)](https://sqlfiddle.com/)
+
+## Esquema do Banco de Dados (Sakila)
+
+```sql
+-- Criação do Esquema do Banco de Dados Sakila
+CREATE DATABASE sakila;
+
+-- Use o Banco de Dados Sakila
+USE sakila;
+
+-- O restante do seu código SQL vai aqui...
+-- Sua Consulta SQL
+SELECT 
+    cus.customer_id,
+    cus.first_name,    
+    cus.last_name,
+    pay.rental_id,
+    pay.amount
+FROM customer cus
+JOIN payment pay ON cus.customer_id = pay.payment_id;
